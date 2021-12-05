@@ -1,3 +1,58 @@
 body {
   font-family: sans-serif;
+  background: lightpink;
+}
+
+#api-finder-title {
+  text-align: center;
+  text-shadow: 1px 1px 0px #ffffff;
+  color: darkcyan;
+}
+
+.apis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.api {
+  display: grid;
+  grid-template: 3rem 1rem 4rem 3rem / repeat(3, calc(100% / 3));
+  text-align: center;
+  background: darkcyan;
+  color: #fff;
+  margin-bottom: 1em;
+  width: 50vw;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.api-name {
+  grid-column-start: 2;
+}
+
+.api-name a {
+  color: lightcoral;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.api-name a:hover,
+.api-name a:focus {
+  color: #fff;
+}
+
+.api-description {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.api-auth {
+  grid-row-start: 4;
+}
+
+.api-https {
+  grid-row-start: 4;
+  grid-column-start: 3;
 }
