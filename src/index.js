@@ -40,7 +40,9 @@ supports HTTPS
   return `
     <div class="api">
       <div class="api-name">
-        ${apiData.API} (${apiData.Category})
+        <a href="${apiData.Link}" target="_blank">
+          ${apiData.API} (${apiData.Category})
+        </a>
       </div>
       <div class="api-description">
         ${apiData.Description}
@@ -64,8 +66,9 @@ function render(apis) {
 // display apis function
 function displayApis(allApis) {
   const apis = allApis.entries.slice(0, 50);
+  const apisContainer = document.getElementById("apis-container");
 
-  document.body.innerHTML = render(apis);
+  apisContainer.innerHTML = render(apis);
 }
 
 fetchApis().then(displayApis);
